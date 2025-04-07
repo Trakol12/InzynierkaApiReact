@@ -1,0 +1,214 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.App {
+    max-width: 800px; /* Increased width for desktop */
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px; /* Increased padding for better spacing */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    color: black;
+    position: relative; /* For absolute positioning of logout button */
+    
+}
+
+.header {
+    
+    height: 5%;
+    background: white; /* Match background of the .App for consistency */
+    padding: 10px 20px; /* Padding for aesthetics */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Consistent shadow with .App */
+    position: fixed; /* Fix header at the top */
+    top: 0; /* Position it at the very top */
+    left: 0; /* Align it to the left */
+    right: 0; /* Stretch across the full width */   
+    display: flex;
+    align-items: center;
+}
+
+
+
+.main-content {
+    margin-top: 30px;
+}
+h1, h2 {
+    color: #333;
+    margin-bottom: 15px; /* Added margin for spacing */
+    text-align: center; /* Center text */
+}
+.logout-button {
+    display: flex;
+    justify-content: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #dc3545; /* Bootstrap danger color */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.spacer {
+    flex-grow: 1; /* Takes all available space, pushing subsequent elements to the right */
+}
+.registration-button-container {
+    display: flex;
+    justify-content: flex-end; /* Align the button to the right */
+    width: 30%; /* Full width for the container */
+    
+}
+.registration-button {
+    display:flex;
+    justify-content:right;
+
+}
+    .logout-button:hover {
+        background-color: #c82333; /* Darker red on hover */
+    }
+.login-container, .dashboard-container, .registration-container {
+    width: 100%; /* Full width for containers */
+    margin-bottom: 30px; /* Increased margin for separation */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+}
+
+.input-field {  
+    padding: 12px; /* Increased padding for comfort */
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px; /* Increased font size for readability */
+
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px; /* Increased padding for buttons */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px; /* Increased font size for buttons */
+    margin: 5px;
+}
+
+    .button:hover {
+        background-color: #0056b3;
+    }
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    text-align: center; /* Center error message */
+}
+
+.admin-message {
+    color: green;
+    text-align: center; /* Center admin message */
+}
+
+.user-message {
+    color: blue;
+    text-align: center; /* Center user message */
+}
+
+.search-container {
+    display: flex;
+    justify-content: center; /* Center search inputs */
+    align-items: center;
+    margin-bottom: 15px; /* Added margin for spacing */
+}
+.scraping-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin-top: 20px; /* Space above the scraping section */
+}
+
+.scrape-button-container {
+    display: flex;
+    justify-content: center; /* Center the button */
+    width: 100%; /* Full width for centering */
+    margin-bottom: 20px; /* Space below the button */
+    
+}
+.product-results {
+    display: flex;
+    flex-direction: column;
+    background-color: #e9ecef;
+    padding: 20px; /* Increased padding for product results */
+    border-radius: 4px;
+    margin-top: 10px;
+    width: 100%; /* Full width for product results */
+    max-width: 500px; /* Limit width for product results */
+}
+.scraping-container {
+    max-width: 500px;
+}
+.image-container {
+    text-align: center;
+    margin-top: 20px; /* Increased margin for spacing */
+}
+
+.product-image {
+    max-width: 50%;
+    height: auto;
+    border-radius: 4px;
+}
+
+
+label {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+    label input {
+        margin-right: 5px;
+    }
+
+/* Additional styles for better layout */
+@media (min-width: 769px) {
+    .search-container {
+        flex-direction: row; /* Keep search inputs in a row */
+    }
+
+    .input-field {
+        flex: 1; /* Allow input fields to grow */
+        margin-right: 10px; /* Space between input fields */
+    }
+
+        .input-field:last-child {
+            margin-right: 0; /* Remove margin from the last input */
+        }
+}
+@media(max-width: 768px)
+{
+    .header{
+        padding:10px;
+        text-align:left;
+        height: 9%;
+        
+    }
+    .registration-button-container{
+        width:33%;
+        
+        
+    }
+    
+}
